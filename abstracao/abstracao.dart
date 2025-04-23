@@ -1,6 +1,11 @@
 
 import 'Cachorro.dart';
+import 'Caminhao.dart';
+import 'Carro.dart';
 import 'Gato.dart';
+import 'Moto.dart';
+import 'PagamentoCartao.dart';
+import 'PagamentoPix.dart';
 
 /**
  * abstração é o princípio da poo que permite ocultar os detalhes internos e mostrar apenas o que é relevante para o uso de uma classe ou método.
@@ -22,4 +27,36 @@ import 'Gato.dart';
 
   //usando interface através do implements
   //quando usamos implements, a classe é obrigada a implementar tudo que existe na Classe abstrata, incluindo métodos já implementados
+
+  //EX com meios de pagamentos
+  PagamentoPix pag = new PagamentoPix(300);
+  pag.realizaPagamento();
+  pag.emitirComprovante();
+
+  //pagamento cartão
+
+  PagamentoCartao cartao = new PagamentoCartao(300, 3);
+  cartao.realizaPagamento();
+  cartao.emitirComprovante();
+
+  //CARRO
+  Carro carro = new Carro();
+  carro.abastecer();
+  carro.ligar();
+  carro.desligar();
+  carro.buzinar();
+
+  //MOTO
+  Moto dt = new Moto();
+  dt.ligar();
+  dt.buzinar();
+  dt.abastecer();
+  dt.desligar();
+
+  //caminhão
+  Caminhao optimus = new Caminhao();
+  optimus.ligar();
+  optimus.buzinar();
+  optimus.abastecer();
+  optimus.desligar();
 }
