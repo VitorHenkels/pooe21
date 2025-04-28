@@ -1,8 +1,7 @@
 import 'Notificacao.dart';
 
-class SMS implements Notificacao{
-  @override
+class SMS extends Notificacao{
   enviar(String mensagem) {
-    print("SMS ENVIADO");
+    print(mensagem);
   }
 }

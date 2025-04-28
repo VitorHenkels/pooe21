@@ -1,9 +1,8 @@
 import 'Notificacao.dart';
 
-class Email implements Notificacao{
-  @override
+class Email extends  Notificacao{
   enviar(String mensagem) {
     // TODO: implement enviar
-    print("Não responda esse email. código: 1122");
+    print(mensagem);
   }
 }
